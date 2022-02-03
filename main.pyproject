@@ -1,0 +1,3 @@
+{
+    "files": ["resources/menuItems.json","LICENSE","resources/us_cities.json","resources/firstNames.json","resources/occupations.json","AppleIdInfo.py","resources/lastNames.json","main.py","generator.py","README.md","basic.ui"]
+}

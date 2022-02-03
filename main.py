@@ -1,63 +1,146 @@
-import random
-import json
-import secrets
-import string
+# This Python file uses the following encoding: utf-8
+import os
+from AppleIdInfo import AppleIdInfo
+from PyQt5 import QtWidgets, uic
+import sys
+import pyperclip as clipboard
+
+class GeneratorIcloudUser(QtWidgets.QWidget):
+    def __init__(self):
+        super(GeneratorIcloudUser, self).__init__()
+        uic.loadUi('basic.ui', self)
+
+        self.appleId = AppleIdInfo()
+
+        self.pushButtonCopyName = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyName') # Find the button
+        self.lineEditName = self.findChild(QtWidgets.QLineEdit, 'lineEditName')
+        self.pushButtonCopyName.clicked.connect(self.copyName)
+
+        self.pushButtonCopyLastName = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyLastName') # Find the button
+        self.lineEditName = self.findChild(QtWidgets.QLineEdit, 'lineEditLastName')
+        self.pushButtonCopyLastName.clicked.connect(self.copyLastName)
+
+        self.pushButtonCopyMail = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyMail') # Find the button
+        self.lineEditMail = self.findChild(QtWidgets.QLineEdit, 'lineEditMail')
+        self.pushButtonCopyMail.clicked.connect(self.copyMail)
+
+        self.pushButtonCopyPass = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyPass') # Find the button
+        self.lineEditPass = self.findChild(QtWidgets.QLineEdit, 'lineEditPass')
+        self.pushButtonCopyPass.clicked.connect(self.copyPass)
+
+        self.pushButtonCopyFriend = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyFriend') # Find the button
+        self.lineEditFriend = self.findChild(QtWidgets.QLineEdit, 'lineEditFriend')
+        self.pushButtonCopyFriend.clicked.connect(self.copyFriend)
+
+        self.pushButtonCopyOccupation = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyOccupation') # Find the button
+        self.lineEditOccupation = self.findChild(QtWidgets.QLineEdit, 'lineEditOccupation')
+        self.pushButtonCopyOccupation.clicked.connect(self.copyOccupation)
+
+        self.pushButtonCopyDate = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyDate') # Find the button
+        self.lineEditDate = self.findChild(QtWidgets.QLineEdit, 'lineEditDate')
+        self.pushButtonCopyDate.clicked.connect(self.copyDate)
+
+        self.pushButtonCopyPhonePre = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyPhonePre') # Find the button
+        self.lineEditPhonePre = self.findChild(QtWidgets.QLineEdit, 'lineEditPhonePre')
+        self.pushButtonCopyPhonePre.clicked.connect(self.copyPhonePre)
+
+        self.pushButtonCopyPhone = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyPhone') # Find the button
+        self.lineEditPhone = self.findChild(QtWidgets.QLineEdit, 'lineEditPhone')
+        self.pushButtonCopyPhone.clicked.connect(self.copyPhone)
+
+        self.pushButtonCopyCityPay = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyCityPay') # Find the button
+        self.lineEditCityPay = self.findChild(QtWidgets.QLineEdit, 'lineEditCityPay')
+        self.pushButtonCopyCityPay.clicked.connect(self.copyCityPay)
+
+        self.pushButtonCopyCp = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyCp') # Find the button
+        self.lineEditCp = self.findChild(QtWidgets.QLineEdit, 'lineEditCp')
+        self.pushButtonCopyCp.clicked.connect(self.copyCp)
+
+        self.pushButtonCopyStreet = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyStreet') # Find the button
+        self.lineEditStreet = self.findChild(QtWidgets.QLineEdit, 'lineEditStreet')
+        self.pushButtonCopyStreet.clicked.connect(self.copyStreet)
 
 
-def generateCity() -> str :
-    with open('resources/us_cities.json') as json_file:
-        data = json.load(json_file)
+        self.name = "jon"
+        self.lastName = "doe"
+        self.mail = "jon.doe456@hotmail.com"
+        self.password = "s3CreT*"
+        self.city = "la habana"
+        self.friend = "pepe"
+        self.occupation = "cochero"
+        self.date = "21_1_1990"
+        self.phonePrefix = "786"
+        self.phone = "5555555"
+        self.payCity = "Orlando"
+        self.payState = "Florida"
+        self.payStreet = "911 Evergreen"
+        self.payCP = "32789"
+        
+        # self.button.clicked.connect(self.printButtonPressed) # Remember to pass the definition/method, not the return value!
+        self.show()
 
-        cities = data["cities"]
-        random_index = random.randint(0, len(cities)-1)
-        return (data["cities"][random_index]["city"]).lower()
-    return "La Habana"
+    def printButtonPressed(self):
+        # This is executed when the button is pressed
+        print('printButtonPressed')
 
-def generatePass() -> str :
-    alphabet = string.ascii_letters + string.digits
-    password = ''.join(secrets.choice(alphabet) for i in range(10))
-    password+="*"
-    return password
+    def generatePerson(self):
+        self.appleId = AppleIdInfo()
 
-def generateOcuppation() -> str :
-    with open('resources/occupations.json') as json_file:
-        data = json.load(json_file)
-        occupations = data["occupations"]
-        random_index = random.randint(0, len(occupations)-1)
-        return (data["occupations"][random_index]).lower()
-    return "actor"
+    def populate(self):
+        pass
+        
 
-def generateFriend():
-    with open('resources/firstNames.json') as json_file:
-        data = json.load(json_file)
-        occupations = data["firstNames"]
-        random_index = random.randint(0, len(occupations)-1)
-        return (data["firstNames"][random_index]).lower()
-    return "peter"
+    def copyName(self):
+        clipboard.copy(self.lineEditName.text())
 
-
-def generateMail() -> str :
-    mail=""
-    with open('resources/firstNames.json') as json_file:
-        data = json.load(json_file)
-        occupations = data["firstNames"]
-        random_index = random.randint(0, len(occupations)-1)
-        mail += (data["firstNames"][random_index]).lower()
-    with open('resources/lastNames.json') as json_file:
-        data = json.load(json_file)
-        occupations = data["lastNames"]
-        random_index = random.randint(0, len(occupations)-1)
-        mail += "."+(data["lastNames"][random_index]).lower()
+    def copyLastName(self):
+        clipboard.copy(self.lineEditLastName.text())
     
-    mail+=str(random.randint(100, 999))+"@hotmail.com"
-    return mail
+    def copyMail(self):
+        clipboard.copy(self.lineEditName.text())
+
+    def copyPass(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    def copyFriend(self):
+        clipboard.copy(self.lineEditName.text())
+
+    def copyOccupation(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyDate(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyPhonePre(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyPhone(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyCityPay(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyCp(self):
+        clipboard.copy(self.lineEditLastName.text())
+    
+    
+    def copyStreet(self):
+        clipboard.copy(self.lineEditLastName.text())
+
+    
     
 
 
 
-def generateDate():
-    return str(random.randint(1,28))+"_"+str(random.randint(1,12))+"_"+str(random.randint(1970,1999))
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    window = GeneratorIcloudUser()
+    app.exec_()
 
 
-for x in range(10):
-    print("{}:{}:{}:{}:{}:{}".format(generateMail(), generatePass(), generateCity(),generateFriend(), generateOcuppation(), generateDate()))
+
