@@ -1,1 +1,5 @@
 # genratorUserIcloud
+
+install pip
+
+pyperclip

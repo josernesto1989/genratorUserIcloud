@@ -17,7 +17,7 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.pushButtonCopyName.clicked.connect(self.copyName)
 
         self.pushButtonCopyLastName = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyLastName') # Find the button
-        self.lineEditName = self.findChild(QtWidgets.QLineEdit, 'lineEditLastName')
+        self.lineEditLastName = self.findChild(QtWidgets.QLineEdit, 'lineEditLastName')
         self.pushButtonCopyLastName.clicked.connect(self.copyLastName)
 
         self.pushButtonCopyMail = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyMail') # Find the button
@@ -61,6 +61,11 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.pushButtonCopyStreet.clicked.connect(self.copyStreet)
 
 
+        self.pushButtonCopyCity = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyCity') # Find the button
+        self.lineEditCity = self.findChild(QtWidgets.QLineEdit, 'lineEditCity')
+        self.pushButtonCopyCity.clicked.connect(self.copyCity)
+
+
         self.name = "jon"
         self.lastName = "doe"
         self.mail = "jon.doe456@hotmail.com"
@@ -75,20 +80,52 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.payState = "Florida"
         self.payStreet = "911 Evergreen"
         self.payCP = "32789"
-        
+
+        self.populate()        
         # self.button.clicked.connect(self.printButtonPressed) # Remember to pass the definition/method, not the return value!
         self.show()
 
-    def printButtonPressed(self):
-        # This is executed when the button is pressed
-        print('printButtonPressed')
+    # def printButtonPressed(self):
+    #     # This is executed when the button is pressed
+    #     print('printButtonPressed')
 
     def generatePerson(self):
         self.appleId = AppleIdInfo()
+        self.populate()
 
     def populate(self):
-        pass
         
+
+
+        self.name = self.appleId.name
+        self.lastName = self.appleId.lastName
+        self.mail = self.appleId.mail
+        self.password = self.appleId.password
+        self.city = self.appleId.city
+        self.friend = self.appleId.friend
+        self.occupation = self.appleId.occupation
+        self.date = self.appleId.date
+        self.phonePrefix = "786"
+        self.phone = self.appleId.phone
+        self.payCity = "Orlando"
+        self.payState = "Florida"
+        self.payStreet = "911 Evergreen"
+        self.payCP = "32789"
+
+
+        self.lineEditName.setText(self.name)
+        self.lineEditLastName.setText(self.lastName)
+        self.lineEditMail.setText(self.mail)
+        self.lineEditPass.setText(self.password)
+        self.lineEditFriend.setText(self.friend)
+        self.lineEditOccupation.setText(self.occupation)
+        self.lineEditDate.setText(self.date)
+        self.lineEditPhonePre.setText(self.phonePrefix)
+        self.lineEditPhone.setText(self.phone)
+        self.lineEditCityPay.setText(self.payCity)
+        self.lineEditCp.setText(self.payCP)
+        self.lineEditStreet.setText(self.payStreet)
+        self.lineEditCity.setText(self.city)
 
     def copyName(self):
         clipboard.copy(self.lineEditName.text())
@@ -97,40 +134,41 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         clipboard.copy(self.lineEditLastName.text())
     
     def copyMail(self):
-        clipboard.copy(self.lineEditName.text())
+        clipboard.copy(self.lineEditMail.text())
 
     def copyPass(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditPass.text())
     
     def copyFriend(self):
-        clipboard.copy(self.lineEditName.text())
+        clipboard.copy(self.lineEditFriend.text())
 
     def copyOccupation(self):
-        clipboard.copy(self.lineEditLastName.text())
-    
+        clipboard.copy(self.lineEditOccupation.text())
     
     def copyDate(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditDate.text())
     
     
     def copyPhonePre(self):
-        clipboard.copy(self.lineEditLastName.text())
-    
+        clipboard.copy(self.lineEditPhonePre.text())
     
     def copyPhone(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditPhone.text())
     
     
     def copyCityPay(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditCityPay.text())
     
     
     def copyCp(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditCp.text())
     
     
     def copyStreet(self):
-        clipboard.copy(self.lineEditLastName.text())
+        clipboard.copy(self.lineEditStreet.text())
+
+    def copyCity(self):
+        clipboard.copy(self.lineEditCity.text())
 
     
     

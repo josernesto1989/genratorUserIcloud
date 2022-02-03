@@ -22,7 +22,11 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="lineEditName"/>
+    <widget class="QLineEdit" name="lineEditName">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="0" column="2">
     <widget class="QPushButton" name="pushButtonCopyName">
@@ -39,7 +43,11 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="lineEditLastName"/>
+    <widget class="QLineEdit" name="lineEditLastName">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="1" column="2">
     <widget class="QPushButton" name="pushButtonCopyLastName">
@@ -56,7 +64,11 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QLineEdit" name="lineEditMail"/>
+    <widget class="QLineEdit" name="lineEditMail">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="2" column="2">
     <widget class="QPushButton" name="pushButtonCopyMail">
@@ -73,7 +85,11 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QLineEdit" name="lineEditPass"/>
+    <widget class="QLineEdit" name="lineEditPass">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="3" column="2">
     <widget class="QPushButton" name="pushButtonCopyPass">
@@ -90,7 +106,11 @@
     </widget>
    </item>
    <item row="4" column="1">
-    <widget class="QLineEdit" name="lineEditDate"/>
+    <widget class="QLineEdit" name="lineEditDate">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="4" column="2">
     <widget class="QPushButton" name="pushButtonCopyDate">
@@ -107,7 +127,11 @@
     </widget>
    </item>
    <item row="5" column="1">
-    <widget class="QLineEdit" name="lineEditFriend"/>
+    <widget class="QLineEdit" name="lineEditFriend">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="5" column="2">
     <widget class="QPushButton" name="pushButtonCopyFriend">
@@ -124,7 +148,11 @@
     </widget>
    </item>
    <item row="6" column="1">
-    <widget class="QLineEdit" name="lineEditOccupation"/>
+    <widget class="QLineEdit" name="lineEditOccupation">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="6" column="2">
     <widget class="QPushButton" name="pushButtonCopyOccupation">
@@ -141,7 +169,11 @@
     </widget>
    </item>
    <item row="7" column="1">
-    <widget class="QLineEdit" name="lineEditCity"/>
+    <widget class="QLineEdit" name="lineEditCity">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="7" column="2">
     <widget class="QPushButton" name="pushButtonCopyCity">
@@ -158,7 +190,11 @@
     </widget>
    </item>
    <item row="8" column="1">
-    <widget class="QLineEdit" name="lineEditStreet"/>
+    <widget class="QLineEdit" name="lineEditStreet">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="8" column="2">
     <widget class="QPushButton" name="pushButtonCopyStreet">
@@ -175,7 +211,11 @@
     </widget>
    </item>
    <item row="9" column="1">
-    <widget class="QLineEdit" name="lineEditCityPay"/>
+    <widget class="QLineEdit" name="lineEditCityPay">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="9" column="2">
     <widget class="QPushButton" name="pushButtonCopyCityPay">
@@ -192,7 +232,11 @@
     </widget>
    </item>
    <item row="10" column="1">
-    <widget class="QLineEdit" name="lineEditCp"/>
+    <widget class="QLineEdit" name="lineEditCp">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="10" column="2">
     <widget class="QPushButton" name="pushButtonCopyCp">
@@ -209,7 +253,11 @@
     </widget>
    </item>
    <item row="11" column="1">
-    <widget class="QLineEdit" name="lineEditPhonePre"/>
+    <widget class="QLineEdit" name="lineEditPhonePre">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="11" column="2">
     <widget class="QPushButton" name="pushButtonCopyPhonePre">
@@ -226,7 +274,11 @@
     </widget>
    </item>
    <item row="12" column="1">
-    <widget class="QLineEdit" name="lineEditPhone"/>
+    <widget class="QLineEdit" name="lineEditPhone">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
    <item row="12" column="2">
     <widget class="QPushButton" name="pushButtonCopyPhone">
@@ -237,6 +289,34 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>pushButtonCopyName</tabstop>
+  <tabstop>lineEditLastName</tabstop>
+  <tabstop>pushButtonCopyLastName</tabstop>
+  <tabstop>lineEditMail</tabstop>
+  <tabstop>pushButtonCopyMail</tabstop>
+  <tabstop>lineEditPass</tabstop>
+  <tabstop>pushButtonCopyPass</tabstop>
+  <tabstop>lineEditDate</tabstop>
+  <tabstop>pushButtonCopyDate</tabstop>
+  <tabstop>lineEditFriend</tabstop>
+  <tabstop>pushButtonCopyFriend</tabstop>
+  <tabstop>lineEditOccupation</tabstop>
+  <tabstop>pushButtonCopyOccupation</tabstop>
+  <tabstop>lineEditCity</tabstop>
+  <tabstop>pushButtonCopyCity</tabstop>
+  <tabstop>lineEditStreet</tabstop>
+  <tabstop>pushButtonCopyStreet</tabstop>
+  <tabstop>lineEditCityPay</tabstop>
+  <tabstop>pushButtonCopyCityPay</tabstop>
+  <tabstop>lineEditCp</tabstop>
+  <tabstop>pushButtonCopyCp</tabstop>
+  <tabstop>lineEditPhonePre</tabstop>
+  <tabstop>pushButtonCopyPhonePre</tabstop>
+  <tabstop>lineEditPhone</tabstop>
+  <tabstop>pushButtonCopyPhone</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
