@@ -14,17 +14,10 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
+   <item row="9" column="2">
+    <widget class="QPushButton" name="pushButtonCopyCityPay">
      <property name="text">
-      <string>Name</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QLineEdit" name="lineEditName">
-     <property name="readOnly">
-      <bool>true</bool>
+      <string>COPIAR</string>
      </property>
     </widget>
    </item>
@@ -35,10 +28,27 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_2">
+   <item row="11" column="2">
+    <widget class="QPushButton" name="pushButtonCopyPhonePre">
      <property name="text">
-      <string>apellido</string>
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QPlainTextEdit" name="plainTextEditAbstract"/>
+   </item>
+   <item row="12" column="2">
+    <widget class="QPushButton" name="pushButtonCopyPhone">
+     <property name="text">
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="2">
+    <widget class="QPushButton" name="pushButtonCopyCity">
+     <property name="text">
+      <string>COPIAR</string>
      </property>
     </widget>
    </item>
@@ -49,8 +59,43 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="pushButtonCopyLastName">
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Calle</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="pushButtonCopyPass">
+     <property name="text">
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QPushButton" name="pushButtonCopyOccupation">
+     <property name="text">
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="2">
+    <widget class="QPushButton" name="pushButtonCopyStreet">
+     <property name="text">
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="2">
+    <widget class="QPushButton" name="pushButtonCopyCp">
      <property name="text">
       <string>COPIAR</string>
      </property>
@@ -60,6 +105,13 @@
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>Correo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Amigo</string>
      </property>
     </widget>
    </item>
@@ -77,24 +129,17 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>Password</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="lineEditPass">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="2">
-    <widget class="QPushButton" name="pushButtonCopyPass">
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButtonCopyLastName">
      <property name="text">
       <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QLineEdit" name="lineEditStreet">
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -105,29 +150,99 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
-    <widget class="QLineEdit" name="lineEditDate">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
-    <widget class="QPushButton" name="pushButtonCopyDate">
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_7">
      <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label_6">
-     <property name="text">
-      <string>Amigo</string>
+      <string>Ocupacion</string>
      </property>
     </widget>
    </item>
    <item row="5" column="1">
     <widget class="QLineEdit" name="lineEditFriend">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="2">
+    <widget class="QPushButton" name="pushButtonCopyAbstract">
+     <property name="text">
+      <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="lineEditPass">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>phone</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Ciudad</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QLineEdit" name="lineEditName">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>phone Prefijo</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Ciudad Pago</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Password</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>apellido</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>Resumen</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QLineEdit" name="lineEditCity">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="lineEditOccupation">
      <property name="readOnly">
       <bool>true</bool>
      </property>
@@ -140,136 +255,10 @@
      </property>
     </widget>
    </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="text">
-      <string>Ocupacion</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="1">
-    <widget class="QLineEdit" name="lineEditOccupation">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="2">
-    <widget class="QPushButton" name="pushButtonCopyOccupation">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="0">
-    <widget class="QLabel" name="label_8">
-     <property name="text">
-      <string>Ciudad</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="1">
-    <widget class="QLineEdit" name="lineEditCity">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="2">
-    <widget class="QPushButton" name="pushButtonCopyCity">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QLabel" name="label_9">
-     <property name="text">
-      <string>Calle</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="1">
-    <widget class="QLineEdit" name="lineEditStreet">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="2">
-    <widget class="QPushButton" name="pushButtonCopyStreet">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="0">
-    <widget class="QLabel" name="label_10">
-     <property name="text">
-      <string>Ciudad Pago</string>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="1">
-    <widget class="QLineEdit" name="lineEditCityPay">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="9" column="2">
-    <widget class="QPushButton" name="pushButtonCopyCityPay">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="0">
-    <widget class="QLabel" name="label_11">
-     <property name="text">
-      <string>CP</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="1">
-    <widget class="QLineEdit" name="lineEditCp">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="2">
-    <widget class="QPushButton" name="pushButtonCopyCp">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="0">
-    <widget class="QLabel" name="label_12">
-     <property name="text">
-      <string>phone Prefijo</string>
-     </property>
-    </widget>
-   </item>
    <item row="11" column="1">
     <widget class="QLineEdit" name="lineEditPhonePre">
      <property name="readOnly">
       <bool>true</bool>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="2">
-    <widget class="QPushButton" name="pushButtonCopyPhonePre">
-     <property name="text">
-      <string>COPIAR</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="0">
-    <widget class="QLabel" name="label_13">
-     <property name="text">
-      <string>phone</string>
      </property>
     </widget>
    </item>
@@ -280,10 +269,45 @@
      </property>
     </widget>
    </item>
-   <item row="12" column="2">
-    <widget class="QPushButton" name="pushButtonCopyPhone">
+   <item row="10" column="1">
+    <widget class="QLineEdit" name="lineEditCp">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1">
+    <widget class="QLineEdit" name="lineEditCityPay">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>CP</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QPushButton" name="pushButtonCopyDate">
      <property name="text">
       <string>COPIAR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="lineEditDate">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QPushButton" name="pushButtonNewId">
+     <property name="text">
+      <string>Generar Nuevo</string>
      </property>
     </widget>
    </item>

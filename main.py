@@ -65,6 +65,14 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.lineEditCity = self.findChild(QtWidgets.QLineEdit, 'lineEditCity')
         self.pushButtonCopyCity.clicked.connect(self.copyCity)
 
+        self.pushButtonCopyAbstract = self.findChild(QtWidgets.QPushButton, 'pushButtonCopyAbstract') # Find the button
+        self.plainTextEditAbstract = self.findChild(QtWidgets.QPlainTextEdit, 'plainTextEditAbstract')
+        self.pushButtonCopyAbstract.clicked.connect(self.copyAbstract)
+
+        self.pushButtonNewId.clicked.connect(self.generatePerson)
+
+
+
 
         self.name = "jon"
         self.lastName = "doe"
@@ -80,6 +88,7 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.payState = "Florida"
         self.payStreet = "911 Evergreen"
         self.payCP = "32789"
+        self.abstract = ""
 
         self.populate()        
         # self.button.clicked.connect(self.printButtonPressed) # Remember to pass the definition/method, not the return value!
@@ -111,6 +120,7 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.payState = "Florida"
         self.payStreet = "911 Evergreen"
         self.payCP = "32789"
+        self.abstract = self.appleId.getStringResume()
 
 
         self.lineEditName.setText(self.name)
@@ -126,6 +136,8 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
         self.lineEditCp.setText(self.payCP)
         self.lineEditStreet.setText(self.payStreet)
         self.lineEditCity.setText(self.city)
+        self.plainTextEditAbstract.setPlainText(self.abstract)
+
 
     def copyName(self):
         clipboard.copy(self.lineEditName.text())
@@ -170,14 +182,14 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
     def copyCity(self):
         clipboard.copy(self.lineEditCity.text())
 
-    
-    
-
+    def copyAbstract(self):
+        clipboard.copy(self.abstract)    
 
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = GeneratorIcloudUser()
+    window.setWindowTitle("test")
     app.exec_()
 
 
