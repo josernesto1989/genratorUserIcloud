@@ -77,7 +77,7 @@ class GeneratorIcloudUser(QtWidgets.QWidget):
 
         self.name = "jon"
         self.lastName = "doe"
-        self.mail = "jon.doe456@gmail.com"
+        self.mail = "jon.doe456@hotmail.com"
         self.password = "s3CreT*"
         self.city = "la habana"
         self.friend = "pepe"

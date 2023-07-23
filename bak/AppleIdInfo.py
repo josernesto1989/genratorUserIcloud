@@ -6,7 +6,7 @@ class AppleIdInfo:
     def __init__(self):
         self.name = "Jon"
         self.lastName = "Doe"
-        self.mail = "jon.doe456@protonmail.com"
+        self.mail = "jon.doe456@hotmail.com"
         self.password = "s3CreT*"
         self.city = "la habana"
         self.friend = "pepe"

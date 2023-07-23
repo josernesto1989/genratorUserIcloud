@@ -2,34 +2,6 @@ import random
 import json
 import secrets
 import string
-from datetime import datetime
-
-
-meses =(
-     "jan"
-    ,
-     "feb"
-    ,
-     "mar"
-    ,
-     "apr"
-    ,
-     "may"
-    ,
-     "jun"
-    ,
-     "jul"
-    ,
-     "aug"
-    ,
-     "sep"
-     ,
-     "oct"
-    ,
-     "nov"
-    ,
-     "dec"
- )
 
 class ResourceGenerator:
     @staticmethod
@@ -96,8 +68,7 @@ class ResourceGenerator:
 
     @staticmethod
     def generateDate() -> str:
-#        return str(random.randint(1, 28))+"_"+str(datetime.today().month)+"_"+str(random.randint(1970, 1999))
-        return str(random.randint(1, 15))+"_"+meses[random.randint(0, 11)]+"_"+str(random.randint(1970, 1999))
+        return str(random.randint(1, 28))+"_"+str(random.randint(1, 12))+"_"+str(random.randint(1970, 1999))
 
 
     @staticmethod

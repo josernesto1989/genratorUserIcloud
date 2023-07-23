@@ -1,0 +1,39 @@
+{
+  "description": "Month of the Year",
+  "source": "US American Community Center",
+  "cities": [
+    {
+      "month": "january"
+    },
+    {
+      "month": "february"
+    },
+    {
+      "month": "march"
+    },
+    {
+      "month": "april"
+    },
+    {
+      "month": "may"
+    },
+    {
+      "month": "june"
+    },
+    {
+      "month": "july"
+    },
+    {
+      "month": "august"
+    },
+    {
+      "month": "september"
+    },
+    {
+      "month": "november"
+    },
+    {
+      "month": "december"
+    }
+  ]
+}
